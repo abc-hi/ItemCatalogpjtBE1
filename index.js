@@ -317,13 +317,12 @@ import path from 'path';
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
 import { fileURLToPath } from 'url';
-import uploadRouter from './routes/upload.js'
-import dotenv from 'dotenv'
 
-dotenv.config()
+// import dotenv from 'dotenv'
+
+// dotenv.config()
 const app = express();
 app.use(express.json());
-app.use('/api', uploadRouter);
 
 
 // CORS Configuration
@@ -339,11 +338,6 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true // Allow credentials to be included in requests
 }));
-
-
-
-
-
 
 
 
